@@ -98,6 +98,15 @@ function cleanOverview(){
     const savingsChart = document.getElementById('savings-chart');
     savingsChart.hidden = true;
     overview.hidden = true;
+
+    // we clean the form here
+    const amountInput = document.getElementById('amountInput');
+    const tnaInput = document.getElementById('tnaInput');
+    const monthsInput = document.getElementById('monthsInput');
+
+    amountInput.value = "";
+    tnaInput.value = "";
+    monthsInput.value = "";
 }
 
 function deleteSavingsAccountSimulationWithId(aSavingsAccountId){
