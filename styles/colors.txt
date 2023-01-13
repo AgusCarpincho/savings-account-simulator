@@ -1,0 +1,20 @@
+/* Color Theme Swatches in Hex */
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-1-hex { color: #63F25E; }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-2-hex { color: #7BF277; }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-3-hex { color: #7BBF78; }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-4-hex { color: #F2F2F2; }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-1-rgba { color: rgba(99, 242, 94, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-2-rgba { color: rgba(122, 242, 118, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-3-rgba { color: rgba(122, 191, 120, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-4-rgba { color: rgba(242, 242, 242, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-1-hsla { color: hsla(118, 85, 66, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-2-hsla { color: hsla(118, 82, 70, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-3-hsla { color: hsla(118, 35, 61, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-4-hsla { color: hsla(0, 0, 95, 1); }
+.EVA™-ROBOTICS-&-RETAIL-GLOBAL-BRANDING-5-hsla { color: hsla(0, 0, 5, 1); }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="plazos fijos, simulador, finanzas, invertir,savings account, investment, finance">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="icon" href="./utility/favicon.ico" type="ico" sizes="300x400">
+    <title>Invierta ahora - ¡Es gratis!</title>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+      <h2>Calcule su plazo fijo y vea sus rendimientos <i class="fa-solid fa-coins"></i></h2>
+      <section id="instructions">
+        <p>Para comenzar a utilizar el simulador complete a continuación los siguientes campos del plazo fijo que desee consultar y haga click en Calcular.</p>
+        </section>
+        <section id="superiorView">    
+            <form id="formCreateSavingsAccount">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Capital inicial</span>
+                    <input id="amountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="e.g 1000">
+                    <span class="input-group-text">AR$</span>
+                </div>
+                <div id="tna" class="input-group mb-3">
+                    <span class="input-group-text">TNA</span>
+                    <input id="tnaInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="e.g 65">
+                    <span class="input-group-text">%</span>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01">Período</label>
+                  <select id="monthsInput" class="form-select" id="inputGroupSelect01">
+                    <option selected>Elegir...</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                  </select>
+                  <span class="input-group-text">meses</span>
+                </div>
+                <section id="form-buttons">  
+                  <button id="calculateSavingsButton" type="button" class="btn btn-primary">Calcular</button>
+                  <button id="cleanSavingsButton" type="button" class="btn btn-primary">Limpiar</button>
+                  <button id="addSavingsButton" type="button" class="btn btn-primary">Agregar a la lista</button>
+                </section>
+            </form>
+            <section id="overview" hidden>
+                <h2>Resultados:<p id="overviewDescription"></p></h2>
+                <article>
+                    <div class="card border-light mb-3" style="max-width: 9rem;">
+                        <div class="card-header">Capital</div>
+                        <div class="card-body text-success">
+                          <h5 class="card-title">AR$</h5>
+                          <p id="overviewAmount" class="card-text">10000</p>
+                        </div>
+                    </div>
+                    <div class="card border-light mb-3" style="max-width: 9rem;">
+                      <div class="card-header">Período</div>
+                      <div class="card-body text-success">
+                        <h5 class="card-title">Meses</h5>
+                        <p id="overviewPeriodInMonths" class="card-text">12</p>
+                      </div>
+                  </div>
+                    <div class="card border-light mb-3" style="max-width: 9rem;">
+                        <div class="card-header">Interés final</div>
+                        <div class="card-body text-success">
+                          <h5 class="card-title">%</h5>
+                          <p id="overviewFinalInterest" class="card-text">65</p>
+                        </div>
+                    </div>
+                    <div class="card border-light mb-3" style="max-width: 9rem;">
+                        <div class="card-header">Interés por mes</div>
+                        <div class="card-body text-success">
+                          <h5 class="card-title">%</h5>
+                          <p id="overviewInterestByMonth" class="card-text">5.56</p>
+                        </div>
+                    </div>
+                    <div class="card border-light mb-3" style="max-width: 9rem;">
+                        <div class="card-header">Proyección</div>
+                        <div class="card-body text-success">
+                          <h5 class="card-title">AR$</h5>
+                          <p id="overviewProyection" class="card-text">16500</p>
+                        </div>
+                    </div>
+                    <div class="card border-light mb-3" style="max-width: 9rem;">
+                        <div class="card-header">Ganancias finales</div>
+                        <div class="card-body text-success">
+                          <h5 class="card-title">AR$</h5>
+                          <p id="overviewFinalEarnings" class="card-text">6500</p>
+                        </div>
+                    </div>
+                </article>
+                <button id="show-savings-chart" class="btn btn-primary" type="button">Ver gráfico <i class="fa-solid fa-chart-column"></i></button>
+              </section>
+              <section id="savings-chart" class="chart-container" hidden>
+                <button id="back-overview-results" class="btn btn-primary" type="button">Volver <i class="fa-solid fa-arrow-left"></i></button>
+                <canvas id="savings-chart-canvas"></canvas>
+              </section>
+          </section>
+        <section id="results">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"># Nº Simulación</th>
+                    <th scope="col">Capital</th>
+                    <th scope="col">Interés final</th>
+                    <th scope="col">Interés final por mes</th>
+                    <th scope="col">Proyección</th>
+                    <th scope="col">Ganancias finales</th>
+                  </tr>
+                </thead>
+                <tbody id="resultsItems">
+                </tbody>
+              </table>
+        </section>
+    </main>
+    <footer>
+      <p id="author">Made with <i class="fa-solid fa-heart"></i> by Carpi</p>
+    </footer>
+</body>
+<script type="module" src="./js/index.js"></script>
+<script src="https://kit.fontawesome.com/ab84c23c9d.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</html>

@@ -1,0 +1,190 @@
+body {
+  /*Sweet Alert*/
+  /*The main CSS*/
+}
+body .swal-button--confirm {
+  background-color: blueviolet;
+}
+body main {
+  background-color: rgba(168, 168, 168, 0.048);
+  border-radius: 1rem;
+  border-color: blueviolet;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  height: max-content;
+  padding: 1%;
+  margin: 5%;
+}
+body main h2 {
+  text-align: center;
+  color: rgb(71, 13, 125);
+}
+body main #superiorView {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-bottom: 4%;
+}
+body main #superiorView #overview {
+  margin: 1%;
+  padding: 1%;
+  width: max-content;
+}
+body main #superiorView #overview h2 {
+  color: blueviolet;
+  margin: 1%;
+  padding: 1%;
+}
+body main #superiorView #overview h2 p {
+  font-size: large;
+}
+body main #superiorView #overview article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body main #superiorView #overview article div {
+  width: max-content;
+  align-items: center;
+}
+body main #superiorView #overview article div div {
+  padding-inline: 0.25rem;
+  width: max-content;
+}
+body main #superiorView #overview #show-savings-chart {
+  background-color: blueviolet;
+}
+body main #superiorView #overview #show-savings-chart:hover {
+  background-color: rgb(99, 19, 173);
+}
+body main #superiorView #savings-chart {
+  position: relative;
+  height: 40vh;
+  width: 80vw;
+}
+body main #superiorView #savings-chart #back-overview-results {
+  background-color: blueviolet;
+}
+body main #superiorView #savings-chart #back-overview-results:hover {
+  background-color: rgb(99, 19, 173);
+}
+body main #results {
+  margin: 2%;
+}
+body main #results table {
+  background-color: white;
+  border-radius: 0.25rem;
+}
+body main #results table tbody tr .delete-row-simulation-button {
+  margin: 0.5rem;
+  background-color: blueviolet;
+  border: none;
+  color: whitesmoke;
+  font-weight: 600;
+  height: 2.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+body main #results table tbody tr .delete-row-simulation-button:hover {
+  background-color: rgb(71, 13, 125);
+}
+body main #results table tbody tr .show-chart-row-simulation-button {
+  background-color: blueviolet;
+  border: none;
+  color: whitesmoke;
+  font-weight: 600;
+  height: 2.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+body main #results table tbody tr .show-chart-row-simulation-button:hover {
+  background-color: rgb(71, 13, 125);
+}
+body main #results table tbody tr td {
+  color: blueviolet;
+  font-weight: bold;
+}
+body main #results article {
+  margin: 1%;
+  padding: 1%;
+}
+body main #results article p {
+  color: blueviolet;
+}
+body main #instructions {
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  font-size: x-large;
+  color: rgb(71, 13, 125);
+  background-color: white;
+  box-shadow: rgba(105, 33, 173, 0.1) 0px 10px 10px -10px;
+  padding: 1%;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 0rem;
+}
+body main #formCreateSavingsAccount {
+  margin: 2%;
+  box-shadow: rgba(105, 33, 173, 0.1) 0px 1px 0px, rgba(105, 33, 173, 0.1) 0px 8px 24px, rgba(105, 33, 173, 0.1) 0px 16px 48px;
+  padding: 2%;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 0rem;
+  width: 30%;
+  height: 30vh;
+  background-color: white;
+}
+body main #formCreateSavingsAccount #tna {
+  width: 50%;
+}
+body main #formCreateSavingsAccount #form-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton {
+  height: 4vh;
+  background-color: blueviolet;
+  color: whitesmoke;
+  border: none;
+  font-weight: 600;
+}
+body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton:hover {
+  background-color: rgb(105, 33, 173);
+}
+body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton {
+  border: none;
+  background-color: rgb(235, 235, 235);
+  color: rgb(105, 33, 173);
+  font-weight: 600;
+}
+body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton:hover {
+  background-color: rgb(216, 216, 216);
+}
+body main #formCreateSavingsAccount #form-buttons #addSavingsButton {
+  border: none;
+  background-color: rgb(61, 61, 61);
+  color: rgb(222, 222, 222);
+  font-weight: 600;
+}
+body main #formCreateSavingsAccount #form-buttons #addSavingsButton:hover {
+  background-color: rgb(108, 108, 108);
+}
+body main #navbar a {
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: bold;
+}
+body main #navbar a:hover {
+  font-weight: bold;
+  color: blueviolet;
+}
+body footer {
+  text-align: center;
+}
+body footer #author {
+  color: blueviolet;
+  height: 1vh;
+  font-size: medium;
+}
+
+/*# sourceMappingURL=main.css.map */
