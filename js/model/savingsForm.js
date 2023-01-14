@@ -1,6 +1,5 @@
 import { SavingsAccount } from "../model/savingsAccount.js";
 import { initializeShowSavingsChartComponents, showChartSimulationIdentifiedWithId } from "../model/savingsChart.js";
-import { createLebelsForChartAccordingToAPeriod, obteinDataForChartAccordingToActualSavingsAccountOverview } from "../model/savingsChart.js"
 
 export function initializeFormComponents() {
     const calculateButton = document.getElementById("calculateSavingsButton");

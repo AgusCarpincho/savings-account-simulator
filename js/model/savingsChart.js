@@ -14,19 +14,13 @@ export function obteinDataForChartAccordingToActualSavingsAccountOverview(aSavin
 
 export function initializeShowSavingsChartComponents(aSavingsAccount){
     
-    /*      <section id="savings-chart" hidden>
-              <canvas id="savings-chart-canvas"></canvas>
-            </section> 
-    */
-
-    /* Charts configuration */
-    
     const chartContainer = document.getElementById('savings-chart');
-
     let chartCanvas = document.getElementById('savings-chart-canvas');
     const showChartButton = document.getElementById('show-savings-chart');
     const backOverviewResults = document.getElementById('back-overview-results');
     const overview = document.getElementById("overview");
+
+    
     
     /* remove the actual canvas and creates a new one */
     chartContainer.removeChild(document.getElementById('savings-chart-canvas'))
