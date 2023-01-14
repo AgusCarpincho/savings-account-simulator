@@ -58,8 +58,8 @@ body main #superiorView #overview #show-savings-chart:hover {
 }
 body main #superiorView #savings-chart {
   position: relative;
-  height: 40vh;
-  width: 80vw;
+  height: 35vh;
+  width: 50vw;
 }
 body main #superiorView #savings-chart #back-overview-results {
   background-color: blueviolet;

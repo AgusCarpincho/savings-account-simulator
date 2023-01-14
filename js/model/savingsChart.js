@@ -58,7 +58,8 @@ export function initializeShowSavingsChartComponents(aSavingsAccount){
           y: {
             beginAtZero: true
           }
-        }
+        },
+        resposive: true,
       }
     });
 }
