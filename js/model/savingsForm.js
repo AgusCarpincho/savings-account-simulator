@@ -45,8 +45,16 @@ function calculate(){
     let tna = document.querySelector("#tnaInput").value;
     let months = document.querySelector("#monthsInput").value;
     let newSavingsAccount;
+    let newId;
     try{
-        newSavingsAccount = new SavingsAccount(localStorage.length+1,parseInt(amount),parseInt(months),parseInt(tna));
+        let savingsAccountCollection = (JSON.parse(localStorage.getItem("savingsAccounts")));
+        if(savingsAccountCollection.length > 0){
+            newId = (savingsAccountCollection.at(savingsAccountCollection.length - 1)).id + 1;
+        }
+        else{
+            newId = 1;
+        }
+        newSavingsAccount = new SavingsAccount(newId,parseInt(amount),parseInt(months),parseInt(tna));
     }
     catch(error){
         swal({
@@ -120,10 +128,10 @@ function deleteSavingsAccountSimulationWithId(aSavingsAccountId){
       .then((willDelete) => {
         if (willDelete) {
             let savingsAccounts = JSON.parse(localStorage.getItem('savingsAccounts'));
-            for (const savingsAccount of savingsAccounts) {
+            for (let savingsAccount of savingsAccounts) {
                 if(aSavingsAccountId == savingsAccount.id){
-                    savingsAccounts.pop(savingsAccount);
-                    document.getElementById(`simulation-${savingsAccount.id}`).remove();
+                    savingsAccounts = savingsAccounts.filter( savingsAccount => savingsAccount.id != aSavingsAccountId)
+                    document.getElementById(`simulation-${aSavingsAccountId}`).remove();
                     localStorage.setItem('savingsAccounts',JSON.stringify(savingsAccounts));
                 }
             }
@@ -154,10 +162,17 @@ function addToTable(){
     let months = document.querySelector("#monthsInput").value;
     let newSavingsAccount;
     let savingsAccountCollection = JSON.parse(localStorage.getItem('savingsAccounts'));
-    const newSavingsAccountId = savingsAccountCollection.length + 1;
+    let newId; 
+
+    if(savingsAccountCollection.length > 0){
+        newId = (savingsAccountCollection.at(savingsAccountCollection.length - 1).id + 1);
+    }
+    else{
+        newId = 1;
+    }
 
     try{
-        newSavingsAccount = new SavingsAccount(newSavingsAccountId,parseInt(amount),parseInt(months),parseInt(tna));
+        newSavingsAccount = new SavingsAccount(newId,parseInt(amount),parseInt(months),parseInt(tna));
         savingsAccountCollection.push(newSavingsAccount);
         localStorage.setItem("savingsAccounts",JSON.stringify(savingsAccountCollection))
     }
