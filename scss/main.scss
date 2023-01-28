@@ -64,6 +64,18 @@ body{
                         background-color: rgb(99, 19, 173);
                     }
                 }
+                #dollarized-simulation-chart-button{
+                    border: none;
+                    background-color: rgb(138, 207, 34);
+                    &:hover{
+                        background-color: rgb(5, 101, 5);
+                    }
+                }
+                #dollarized-label-button{
+                    font-size: medium;
+                    font-weight: 500;
+                    color: rgb(255, 34, 34);
+                }
             }
         }
         #results{

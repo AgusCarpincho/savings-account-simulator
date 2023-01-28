@@ -1,5 +1,5 @@
 import { SavingsAccount } from "../model/savingsAccount.js";
-import { initializeShowSavingsChartComponents, showChartSimulationIdentifiedWithId } from "../model/savingsChart.js";
+import { dollarizeChartSimulation, initializeShowSavingsChartComponents, showChartSimulationIdentifiedWithId } from "../model/savingsChart.js";
 
 export function initializeFormComponents() {
     const calculateButton = document.getElementById("calculateSavingsButton");
@@ -10,6 +10,9 @@ export function initializeFormComponents() {
 
     const addSavingsButton = document.getElementById("addSavingsButton");
     addSavingsButton.onclick = addToTable;
+
+    const dollarizeButton = document.getElementById("dollarized-simulation-chart-button");
+    dollarizeButton.onclick = dollarizeChartSimulation;
 
     const resultsItems = document.getElementById("resultsItems");
 
@@ -96,7 +99,9 @@ function calculate(){
     // we show the back overview results button when calculate
     (document.getElementById('back-overview-results')).hidden = false;
 
-    
+    // i did this because is complex functionality about show both charts in ARS and USD
+    localStorage.setItem("currentSavingsAccountVisualizing",JSON.stringify(newSavingsAccount));
+
     initializeShowSavingsChartComponents(newSavingsAccount);
 }
 
@@ -114,6 +119,8 @@ function cleanOverview(){
     amountInput.value = "";
     tnaInput.value = "";
     monthsInput.value = "";
+
+    localStorage.setItem("currentSavingsAccountVisualizing",JSON.stringify({}));
 }
 
 function deleteSavingsAccountSimulationWithId(aSavingsAccountId){
