@@ -65,7 +65,6 @@ function calculate(){
             icon: "warning",
             dangerMode: true,
           });
-        console.error(error);
         return;
     }
 
@@ -158,6 +157,11 @@ function addToTable(){
     const overview = document.querySelector("#overview");
     const savingsChartContainer = document.querySelector("#savings-chart");
     if(overview.hidden == true && savingsChartContainer.hidden == true){
+        swal({
+            title: "Para poder agregar una simulación debe calcularla previamente",
+            icon: "warning",
+            dangerMode: true,
+          });
         return;
     }
 
@@ -184,7 +188,11 @@ function addToTable(){
         localStorage.setItem("savingsAccounts",JSON.stringify(savingsAccountCollection))
     }
     catch(error){
-        console.error(error);
+        swal({
+            title: "Para poder agregar una simulación debe calcularla previamente",
+            icon: "warning",
+            dangerMode: true,
+          });
         return;
     }
 
