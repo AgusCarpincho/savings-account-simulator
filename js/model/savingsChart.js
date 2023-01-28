@@ -163,7 +163,7 @@ export async function dollarizeChartSimulation() {
       data: {
         labels: labels,
         datasets: [{
-            label: `Ganancias mensuales (en U$D). última cotización del dólar oficial $${((1/lastUSDARSQuotation)/2).toFixed(2)}`, // i divided the result because its the official dollar value not blue and its almost the half lol
+            label: `Ganancias mensuales (en U$D). última cotización del dólar oficial U$D 1 = AR$ ${((1/lastUSDARSQuotation)/2).toFixed(2)}`, // i divided the result because its the official dollar value not blue and its almost the half lol
             data: data,
             backgroundColor: 'rgb(138, 207, 34)',
             borderWidth: 1
