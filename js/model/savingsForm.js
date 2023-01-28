@@ -47,6 +47,62 @@ function calculate(){
     let amount = document.querySelector("#amountInput").value;
     let tna = document.querySelector("#tnaInput").value;
     let months = document.querySelector("#monthsInput").value;
+    const TNA_LIMIT = 150;
+    const AMOUNT_LIMIT = 10000000000;
+    const MONTHS_LIMIT = 12;
+    /* 
+        parseFloat(tna) > TNA_LIMIT ||
+        parseFloat(tna) > MONTHS_LIMIT ||*/
+    
+    if(parseFloat(amount).toFixed(2) > AMOUNT_LIMIT){
+        swal({
+            title: `El monto supera el limite de la aplicación(${AMOUNT_LIMIT}). Por favor, intente con otro valor.`,
+            icon: "warning",
+            dangerMode: true,
+        });
+        return;
+    }
+    if(parseFloat(amount).toFixed(2) <= 0){
+        swal({
+            title: `El monto debe ser mayor a cero. Por favor, intente con otro valor.`,
+            icon: "warning",
+            dangerMode: true,
+        });
+        return;
+    }
+    if(parseFloat(parseFloat(tna)).toFixed(2) > TNA_LIMIT){
+        swal({
+            title: `La TNA supera el limite actual (${TNA_LIMIT}). Por favor, intente con otro valor.`,
+            icon: "warning",
+            dangerMode: true,
+        });
+        return;
+    }
+    if(parseFloat(tna).toFixed(2) <= 0){
+        swal({
+            title: `La TNA debe ser mayor a cero. Por favor, intente con otro valor.`,
+            icon: "warning",
+            dangerMode: true,
+        });
+        return;
+    }
+    if(parseInt(months) > MONTHS_LIMIT){
+        swal({
+            title: `El período no puede superar los 12 meses. Por favor, intente con otro valor.`,
+            icon: "warning",
+            dangerMode: true,
+        });
+        return;
+    }
+    if(parseInt(months) <= 0){
+        swal({
+            title: `El período no puede ser menor a un mes. Por favor, intente con otro valor.`,
+            icon: "warning",
+            dangerMode: true,
+        });
+        return;
+    }
+
     let newSavingsAccount;
     let newId;
     try{
@@ -61,7 +117,7 @@ function calculate(){
     }
     catch(error){
         swal({
-            title: `Por favor, complete todos los campos del formulario`,
+            title: `Los datos ingresados son incorrectos o falta alguno de ellos. Por favor, intente nuevamente.`,
             icon: "warning",
             dangerMode: true,
           });
