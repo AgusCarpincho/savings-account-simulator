@@ -44,6 +44,12 @@ body{
                         div{
                             padding-inline: 0.25rem;
                             width: 100%;
+                            .card-title{
+                                text-align: center;
+                            }
+                            p{
+                                text-align: center;
+                            }
                         }
                     }
                 }
