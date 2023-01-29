@@ -116,21 +116,23 @@ export function showChartSimulationIdentifiedWithId(simulationId){
 
     const backOverviewButton = document.getElementById('back-overview-results');
     backOverviewButton.hidden = true;
+    document.getElementById("back-overview-results").hidden = true;
+}
+
+async function obteinLastUSDARSQuotation() {
+    
+  let quotation = 0;
+  await fetch("../../utility/USDARSQuotations.json")
+                      .then( response => response.json())
+                      .then( quotationsArray => {
+                        const randomIndex = Math.floor(Math.random() * quotationsArray.length);
+                        quotation = quotationsArray[randomIndex];
+                      });
+  return parseFloat(quotation);
 }
 
 export async function dollarizeChartSimulation() {
 
-  async function obteinLastUSDARSQuotation() {
-    
-    let quotation = 0;
-    await fetch("../../utility/USDARSQuotations.json")
-                        .then( response => response.json())
-                        .then( quotationsArray => {
-                          const randomIndex = Math.floor(Math.random() * quotationsArray.length);
-                          quotation = quotationsArray[randomIndex];
-                        });
-    return parseFloat(quotation);
-  }
   // we use the current savings account that we are visualizing
   
   let lastUSDARSQuotation = await obteinLastUSDARSQuotation();
@@ -178,4 +180,68 @@ export async function dollarizeChartSimulation() {
       }
     });
   chartContainer.hidden = false;
+
+  const pesifyButton = document.getElementById("pesify-simulation-chart-button");
+  pesifyButton.hidden = false;
+  document.getElementById("dollarized-simulation-chart-button").hidden = true;
+  document.getElementById("dollarized-label-button").hidden = true;
+  document.getElementById("dollarized-label-button").parentNode.hidden = true;
+}
+
+export async function pesifyChartSimulation() {
+  
+  document.getElementById("dollarized-simulation-chart-button").hidden = false;
+  document.getElementById("dollarized-label-button").hidden = false;
+
+  const chartContainer = document.getElementById('savings-chart');
+  let chartCanvas = document.getElementById('savings-chart-canvas');
+  
+  /* remove the actual canvas and creates a new one */
+  chartContainer.removeChild(document.getElementById('savings-chart-canvas'))
+  chartCanvas = document.createElement("canvas");
+  chartCanvas.id = 'savings-chart-canvas';
+  chartContainer.appendChild(chartCanvas);
+  
+  // creates the savings account object model
+  const savingsAccountLiteralObjects = (JSON.parse(localStorage.getItem("currentSavingsAccountVisualizing")));
+  let amount = parseFloat(savingsAccountLiteralObjects.amount);
+  const quotation = await obteinLastUSDARSQuotation();
+  console.log(amount);
+  const savingsAccount = new SavingsAccount(savingsAccountLiteralObjects.id,amount,savingsAccountLiteralObjects.periodInMonths,savingsAccountLiteralObjects.tnaIndicator);
+  
+  // i save the current quotized simulation
+  localStorage.setItem("currentSavingsAccountVisualizing",JSON.stringify(savingsAccount));
+  
+  // extract the data from the savings account
+  const labels = createLebelsForChartAccordingToAPeriod(savingsAccount);
+  const data = obteinDataForChartAccordingToActualSavingsAccountOverview(savingsAccount);
+  // we hide the overview, create the chart and show it
+  let overview =  (document.getElementById("overview"));
+  overview.hidden = true;
+  new Chart(chartCanvas, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+            label: 'Ganancias mensuales (en AR$)',
+            data: data,
+            borderColor: 'rgb(99, 19, 173)',
+            backgroundColor: 'blueviolet',
+            borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  chartContainer.hidden = false;
+
+  document.getElementById("pesify-simulation-chart-button").hidden = true;
+  document.getElementById("dollarized-simulation-chart-button").hidden = false;
+  document.getElementById("dollarized-label-button").hidden = false;
+
 }

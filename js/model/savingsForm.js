@@ -1,5 +1,5 @@
 import { SavingsAccount } from "../model/savingsAccount.js";
-import { dollarizeChartSimulation, initializeShowSavingsChartComponents, showChartSimulationIdentifiedWithId } from "../model/savingsChart.js";
+import { dollarizeChartSimulation, initializeShowSavingsChartComponents, showChartSimulationIdentifiedWithId, pesifyChartSimulation } from "../model/savingsChart.js";
 
 export function initializeFormComponents() {
     const calculateButton = document.getElementById("calculateSavingsButton");
@@ -14,6 +14,9 @@ export function initializeFormComponents() {
     const dollarizeButton = document.getElementById("dollarized-simulation-chart-button");
     dollarizeButton.onclick = dollarizeChartSimulation;
 
+    const pesifyButton = document.getElementById("pesify-simulation-chart-button");
+    pesifyButton.onclick = pesifyChartSimulation;
+    
     const resultsItems = document.getElementById("resultsItems");
 
     const savingsAccountsCollectionLiterals = JSON.parse(localStorage.getItem("savingsAccounts"));
