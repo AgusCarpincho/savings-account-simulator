@@ -206,7 +206,6 @@ export async function pesifyChartSimulation() {
   const savingsAccountLiteralObjects = (JSON.parse(localStorage.getItem("currentSavingsAccountVisualizing")));
   let amount = parseFloat(savingsAccountLiteralObjects.amount);
   const quotation = await obteinLastUSDARSQuotation();
-  console.log(amount);
   const savingsAccount = new SavingsAccount(savingsAccountLiteralObjects.id,amount,savingsAccountLiteralObjects.periodInMonths,savingsAccountLiteralObjects.tnaIndicator);
   
   // i save the current quotized simulation
