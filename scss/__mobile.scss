@@ -166,6 +166,7 @@
             }
             #instructions{
                 margin: 2%;
+                margin-top: 2rem;
                 display: flex;
                 flex-direction: row;
                 font-size: x-large;
@@ -176,6 +177,9 @@
                 border-radius: 0.5rem;
                 border-style: solid;
                 border-width: 0rem;
+                p{
+                    font-size: smaller;
+                }
             }
             #formCreateSavingsAccount{
                 margin-top: 3rem;
@@ -189,10 +193,10 @@
                 height: max-content;
                 background-color: white;
                 #tna{
-                    width: 50%;
+                    width: 100%;
                 }
                 #form-buttons{
-                    display: flex;
+                    display: grid;
                     gap: 0.5rem;
                     #calculateSavingsButton{
                         background-color: blueviolet;
