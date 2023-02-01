@@ -267,10 +267,12 @@ function addToTable(){
                         <td>${newSavingsAccount.percentageRealInterestByMonth()}%</td>
                         <td colspan="1">AR$ ${newSavingsAccount.proyection()}</td>
                         <td>AR$ ${newSavingsAccount.finalEarnings()}</td>
+                        <td>
                         <button id="show-savings-chart-simul-${newSavingsAccount.id}" class="btn btn-primary show-chart-row-simulation-button" type="button">Ver gráfico <i class="fa-solid fa-chart-column"></i></button>
                         <button id="delete-simulation-button-${newSavingsAccount.id}" class="btn btn-primary delete-row-simulation-button" type="button">
                             <i class="fa-solid fa-trash"></i>
-                        </button>`;
+                        </button>
+                        </td>`;
     
     resultsItems.appendChild(trNode);
     (document.getElementById(`delete-simulation-button-${newSavingsAccount.id}`)).onclick = () => {deleteSavingsAccountSimulationWithId(newSavingsAccount.id)};
