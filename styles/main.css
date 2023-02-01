@@ -1,229 +1,728 @@
-body {
-  /*Sweet Alert*/
-  /*The main CSS*/
+@media only screen and (max-width: 525px) {
+  body {
+    /*Sweet Alert*/
+    /*The main CSS*/
+  }
+  body .swal-button--confirm {
+    background-color: blueviolet;
+  }
+  body main {
+    background-color: rgba(168, 168, 168, 0.048);
+    border-radius: 1rem;
+    border-color: blueviolet;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    height: max-content;
+    padding: 1%;
+    margin: 5%;
+  }
+  body main h2 {
+    text-align: center;
+    color: rgb(71, 13, 125);
+  }
+  body main #superiorView {
+    display: flexblox;
+    flex-direction: row;
+    text-align: -webkit-center;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+  body main #superiorView #overview {
+    margin: 1%;
+    padding: 1%;
+    width: fit-content;
+  }
+  body main #superiorView #overview h2 {
+    color: blueviolet;
+    margin: 1%;
+    padding: 1%;
+  }
+  body main #superiorView #overview h2 p {
+    font-size: large;
+  }
+  body main #superiorView #overview article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body main #superiorView #overview article div {
+    width: max-content;
+    align-items: center;
+  }
+  body main #superiorView #overview article div div {
+    padding-inline: 0.25rem;
+    width: 100%;
+  }
+  body main #superiorView #overview article div div .card-title {
+    text-align: center;
+  }
+  body main #superiorView #overview article div div p {
+    text-align: center;
+  }
+  body main #superiorView #overview #show-savings-chart {
+    background-color: blueviolet;
+  }
+  body main #superiorView #overview #show-savings-chart:hover {
+    background-color: rgb(99, 19, 173);
+  }
+  body main #superiorView #savings-chart {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    position: relative;
+    text-align: -webkit-center;
+    width: 100%;
+  }
+  body main #superiorView #savings-chart canvas {
+    margin-top: 2rem;
+  }
+  body main #superiorView #savings-chart #back-overview-results {
+    background-color: blueviolet;
+  }
+  body main #superiorView #savings-chart #back-overview-results:hover {
+    background-color: rgb(99, 19, 173);
+  }
+  body main #superiorView #savings-chart #dollarized-simulation-chart-button {
+    border: none;
+    background-color: rgb(138, 207, 34);
+  }
+  body main #superiorView #savings-chart #dollarized-simulation-chart-button:hover {
+    background-color: rgb(5, 101, 5);
+  }
+  body main #superiorView #savings-chart #pesify-simulation-chart-button {
+    border: none;
+    background-color: rgb(61, 61, 61);
+    color: rgb(222, 222, 222);
+    font-weight: 600;
+  }
+  body main #superiorView #savings-chart #pesify-simulation-chart-button:hover {
+    background-color: rgb(108, 108, 108);
+  }
+  body main #superiorView #savings-chart #dollarized-label-button {
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(234, 198, 22);
+  }
+  body main #superiorView #savings-chart .new-feature {
+    width: 80%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  }
+  body main #results {
+    margin: 2%;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+  }
+  body main #results table {
+    width: max-content;
+    text-align: center;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border-width: 0.25rem;
+  }
+  body main #results table tbody tr .delete-row-simulation-button {
+    margin: 0.5rem;
+    background-color: blueviolet;
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  body main #results table tbody tr .delete-row-simulation-button:hover {
+    background-color: rgb(71, 13, 125);
+  }
+  body main #results table tbody tr .show-chart-row-simulation-button {
+    background-color: blueviolet;
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  body main #results table tbody tr .show-chart-row-simulation-button:hover {
+    background-color: rgb(71, 13, 125);
+  }
+  body main #results table tbody tr td {
+    color: blueviolet;
+    font-weight: bold;
+  }
+  body main #results article {
+    margin: 1%;
+    padding: 1%;
+  }
+  body main #results article p {
+    color: blueviolet;
+  }
+  body main #instructions {
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    font-size: x-large;
+    color: rgb(71, 13, 125);
+    background-color: white;
+    box-shadow: rgba(105, 33, 173, 0.1) 0px 10px 10px -10px;
+    padding: 1%;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 0rem;
+  }
+  body main #formCreateSavingsAccount {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: rgba(105, 33, 173, 0.1) 0px 1px 0px, rgba(105, 33, 173, 0.1) 0px 8px 24px, rgba(105, 33, 173, 0.1) 0px 16px 48px;
+    padding: 2%;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 0rem;
+    width: 80%;
+    height: max-content;
+    background-color: white;
+  }
+  body main #formCreateSavingsAccount #tna {
+    width: 50%;
+  }
+  body main #formCreateSavingsAccount #form-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton {
+    background-color: blueviolet;
+    color: whitesmoke;
+    border: none;
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton:hover {
+    background-color: rgb(105, 33, 173);
+  }
+  body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(105, 33, 173);
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton:hover {
+    background-color: rgb(216, 216, 216);
+  }
+  body main #formCreateSavingsAccount #form-buttons #addSavingsButton {
+    border: none;
+    background-color: rgb(61, 61, 61);
+    color: rgb(222, 222, 222);
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #addSavingsButton:hover {
+    background-color: rgb(108, 108, 108);
+  }
+  body main #navbar a {
+    font-family: "Times New Roman", Times, serif;
+    font-size: larger;
+    font-weight: bold;
+  }
+  body main #navbar a:hover {
+    font-weight: bold;
+    color: blueviolet;
+  }
+  body footer {
+    text-align: center;
+  }
+  body footer #author {
+    color: blueviolet;
+    height: 1vh;
+    font-size: medium;
+  }
 }
-body .swal-button--confirm {
-  background-color: blueviolet;
+@media (min-width: 525px) and (max-width: 1135px) {
+  body {
+    /*Sweet Alert*/
+    /*The main CSS*/
+  }
+  body .swal-button--confirm {
+    background-color: blueviolet;
+  }
+  body main {
+    background-color: rgba(168, 168, 168, 0.048);
+    border-radius: 1rem;
+    border-color: blueviolet;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    height: max-content;
+    padding: 1%;
+    margin: 5%;
+  }
+  body main h2 {
+    text-align: center;
+    color: rgb(71, 13, 125);
+  }
+  body main #superiorView {
+    display: flexblox;
+    flex-direction: row;
+    text-align: -webkit-center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+  body main #superiorView #overview {
+    margin: 1%;
+    padding: 1%;
+    width: fit-content;
+  }
+  body main #superiorView #overview h2 {
+    color: blueviolet;
+    margin: 1%;
+    padding: 1%;
+  }
+  body main #superiorView #overview h2 p {
+    font-size: large;
+  }
+  body main #superiorView #overview article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body main #superiorView #overview article div {
+    width: max-content;
+    align-items: center;
+  }
+  body main #superiorView #overview article div div {
+    padding-inline: 0.25rem;
+    width: 100%;
+  }
+  body main #superiorView #overview article div div .card-title {
+    text-align: center;
+  }
+  body main #superiorView #overview article div div p {
+    text-align: center;
+  }
+  body main #superiorView #overview article div div h5 {
+    font-size: smaller;
+  }
+  body main #superiorView #overview #show-savings-chart {
+    background-color: blueviolet;
+  }
+  body main #superiorView #overview #show-savings-chart:hover {
+    background-color: rgb(99, 19, 173);
+  }
+  body main #superiorView #savings-chart {
+    margin-bottom: 5rem;
+    position: relative;
+    text-align: -webkit-center;
+    width: 80%;
+  }
+  body main #superiorView #savings-chart #back-overview-results {
+    background-color: blueviolet;
+  }
+  body main #superiorView #savings-chart #back-overview-results:hover {
+    background-color: rgb(99, 19, 173);
+  }
+  body main #superiorView #savings-chart #dollarized-simulation-chart-button {
+    border: none;
+    background-color: rgb(138, 207, 34);
+  }
+  body main #superiorView #savings-chart #dollarized-simulation-chart-button:hover {
+    background-color: rgb(5, 101, 5);
+  }
+  body main #superiorView #savings-chart #pesify-simulation-chart-button {
+    border: none;
+    background-color: rgb(61, 61, 61);
+    color: rgb(222, 222, 222);
+    font-weight: 600;
+  }
+  body main #superiorView #savings-chart #pesify-simulation-chart-button:hover {
+    background-color: rgb(108, 108, 108);
+  }
+  body main #superiorView #savings-chart #dollarized-label-button {
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(234, 198, 22);
+  }
+  body main #superiorView #savings-chart .new-feature {
+    width: 40%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  }
+  body main #results {
+    margin: 2%;
+    margin-top: 3rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    text-align: -webkit-center;
+  }
+  body main #results::-webkit-scrollbar {
+    width: 0.5rem; /* width of the entire scrollbar */
+  }
+  body main #results table {
+    width: max-content;
+    text-align: center;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border-width: 0.25rem;
+  }
+  body main #results table tbody tr th {
+    font-size: smaller;
+  }
+  body main #results table tbody tr td {
+    font-size: smaller;
+  }
+  body main #results table tbody tr .delete-row-simulation-button {
+    margin: 0.5rem;
+    background-color: blueviolet;
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  body main #results table tbody tr .delete-row-simulation-button:hover {
+    background-color: rgb(71, 13, 125);
+  }
+  body main #results table tbody tr .show-chart-row-simulation-button {
+    background-color: blueviolet;
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: smaller;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  body main #results table tbody tr .show-chart-row-simulation-button:hover {
+    background-color: rgb(71, 13, 125);
+  }
+  body main #results table tbody tr td {
+    color: blueviolet;
+    font-weight: bold;
+  }
+  body main #results article {
+    margin: 1%;
+    padding: 1%;
+  }
+  body main #results article p {
+    color: blueviolet;
+  }
+  body main #instructions {
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    font-size: x-large;
+    color: rgb(71, 13, 125);
+    background-color: white;
+    box-shadow: rgba(105, 33, 173, 0.1) 0px 10px 10px -10px;
+    padding: 1%;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 0rem;
+  }
+  body main #instructions p {
+    font-size: smaller;
+  }
+  body main #formCreateSavingsAccount {
+    margin: 2%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    box-shadow: rgba(105, 33, 173, 0.1) 0px 1px 0px, rgba(105, 33, 173, 0.1) 0px 8px 24px, rgba(105, 33, 173, 0.1) 0px 16px 48px;
+    padding: 2%;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 0rem;
+    text-align: left;
+    width: 65%;
+    height: max-content;
+    background-color: white;
+  }
+  body main #formCreateSavingsAccount #tna {
+    width: 60%;
+  }
+  body main #formCreateSavingsAccount #form-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  body main #formCreateSavingsAccount #form-buttons button {
+    font-size: smaller;
+  }
+  body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton {
+    background-color: blueviolet;
+    color: whitesmoke;
+    border: none;
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton:hover {
+    background-color: rgb(105, 33, 173);
+  }
+  body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(105, 33, 173);
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton:hover {
+    background-color: rgb(216, 216, 216);
+  }
+  body main #formCreateSavingsAccount #form-buttons #addSavingsButton {
+    border: none;
+    background-color: rgb(61, 61, 61);
+    color: rgb(222, 222, 222);
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #addSavingsButton:hover {
+    background-color: rgb(108, 108, 108);
+  }
+  body main #navbar a {
+    font-family: "Times New Roman", Times, serif;
+    font-size: larger;
+    font-weight: bold;
+  }
+  body main #navbar a:hover {
+    font-weight: bold;
+    color: blueviolet;
+  }
+  body footer {
+    text-align: center;
+  }
+  body footer #author {
+    color: blueviolet;
+    height: 1vh;
+    font-size: medium;
+  }
 }
-body main {
-  background-color: rgba(168, 168, 168, 0.048);
-  border-radius: 1rem;
-  border-color: blueviolet;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  height: max-content;
-  padding: 1%;
-  margin: 5%;
-}
-body main h2 {
-  text-align: center;
-  color: rgb(71, 13, 125);
-}
-body main #superiorView {
-  display: flex;
-  flex-direction: row;
-  margin-top: 3%;
-  margin-bottom: 4%;
-}
-body main #superiorView #overview {
-  margin: 1%;
-  padding: 1%;
-  width: max-content;
-}
-body main #superiorView #overview h2 {
-  color: blueviolet;
-  margin: 1%;
-  padding: 1%;
-}
-body main #superiorView #overview h2 p {
-  font-size: large;
-}
-body main #superiorView #overview article {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-body main #superiorView #overview article div {
-  width: max-content;
-  align-items: center;
-}
-body main #superiorView #overview article div div {
-  padding-inline: 0.25rem;
-  width: 100%;
-}
-body main #superiorView #overview article div div .card-title {
-  text-align: center;
-}
-body main #superiorView #overview article div div p {
-  text-align: center;
-}
-body main #superiorView #overview #show-savings-chart {
-  background-color: blueviolet;
-}
-body main #superiorView #overview #show-savings-chart:hover {
-  background-color: rgb(99, 19, 173);
-}
-body main #superiorView #savings-chart {
-  margin-bottom: 5rem;
-  position: relative;
-  height: 35vh;
-  width: 50vw;
-}
-body main #superiorView #savings-chart #back-overview-results {
-  background-color: blueviolet;
-}
-body main #superiorView #savings-chart #back-overview-results:hover {
-  background-color: rgb(99, 19, 173);
-}
-body main #superiorView #savings-chart #dollarized-simulation-chart-button {
-  border: none;
-  background-color: rgb(138, 207, 34);
-}
-body main #superiorView #savings-chart #dollarized-simulation-chart-button:hover {
-  background-color: rgb(5, 101, 5);
-}
-body main #superiorView #savings-chart #pesify-simulation-chart-button {
-  border: none;
-  background-color: rgb(61, 61, 61);
-  color: rgb(222, 222, 222);
-  font-weight: 600;
-}
-body main #superiorView #savings-chart #pesify-simulation-chart-button:hover {
-  background-color: rgb(108, 108, 108);
-}
-body main #superiorView #savings-chart #dollarized-label-button {
-  font-size: medium;
-  font-weight: 500;
-  color: rgb(234, 198, 22);
-}
-body main #superiorView #savings-chart .new-feature {
-  width: 40%;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-}
-body main #results {
-  margin: 2%;
-  border-radius: 0.75rem;
-}
-body main #results table {
-  text-align: center;
-  background-color: white;
-  border-radius: 0.75rem;
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-  border-width: 0.25rem;
-}
-body main #results table tbody tr .delete-row-simulation-button {
-  margin: 0.5rem;
-  background-color: blueviolet;
-  border: none;
-  color: whitesmoke;
-  font-weight: 600;
-  height: 2.5rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-body main #results table tbody tr .delete-row-simulation-button:hover {
-  background-color: rgb(71, 13, 125);
-}
-body main #results table tbody tr .show-chart-row-simulation-button {
-  background-color: blueviolet;
-  border: none;
-  color: whitesmoke;
-  font-weight: 600;
-  height: 2.5rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-body main #results table tbody tr .show-chart-row-simulation-button:hover {
-  background-color: rgb(71, 13, 125);
-}
-body main #results table tbody tr td {
-  color: blueviolet;
-  font-weight: bold;
-}
-body main #results article {
-  margin: 1%;
-  padding: 1%;
-}
-body main #results article p {
-  color: blueviolet;
-}
-body main #instructions {
-  margin: 2%;
-  display: flex;
-  flex-direction: row;
-  font-size: x-large;
-  color: rgb(71, 13, 125);
-  background-color: white;
-  box-shadow: rgba(105, 33, 173, 0.1) 0px 10px 10px -10px;
-  padding: 1%;
-  border-radius: 0.5rem;
-  border-style: solid;
-  border-width: 0rem;
-}
-body main #formCreateSavingsAccount {
-  margin: 2%;
-  box-shadow: rgba(105, 33, 173, 0.1) 0px 1px 0px, rgba(105, 33, 173, 0.1) 0px 8px 24px, rgba(105, 33, 173, 0.1) 0px 16px 48px;
-  padding: 2%;
-  border-radius: 1rem;
-  border-style: solid;
-  border-width: 0rem;
-  width: 30%;
-  height: max-content;
-  background-color: white;
-}
-body main #formCreateSavingsAccount #tna {
-  width: 50%;
-}
-body main #formCreateSavingsAccount #form-buttons {
-  display: flex;
-  gap: 0.5rem;
-}
-body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton {
-  background-color: blueviolet;
-  color: whitesmoke;
-  border: none;
-  font-weight: 600;
-}
-body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton:hover {
-  background-color: rgb(105, 33, 173);
-}
-body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton {
-  border: none;
-  background-color: rgb(235, 235, 235);
-  color: rgb(105, 33, 173);
-  font-weight: 600;
-}
-body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton:hover {
-  background-color: rgb(216, 216, 216);
-}
-body main #formCreateSavingsAccount #form-buttons #addSavingsButton {
-  border: none;
-  background-color: rgb(61, 61, 61);
-  color: rgb(222, 222, 222);
-  font-weight: 600;
-}
-body main #formCreateSavingsAccount #form-buttons #addSavingsButton:hover {
-  background-color: rgb(108, 108, 108);
-}
-body main #navbar a {
-  font-family: "Times New Roman", Times, serif;
-  font-size: larger;
-  font-weight: bold;
-}
-body main #navbar a:hover {
-  font-weight: bold;
-  color: blueviolet;
-}
-body footer {
-  text-align: center;
-}
-body footer #author {
-  color: blueviolet;
-  height: 1vh;
-  font-size: medium;
+@media only screen and (min-width: 1135px) {
+  body {
+    /*Sweet Alert*/
+    /*The main CSS*/
+  }
+  body .swal-button--confirm {
+    background-color: blueviolet;
+  }
+  body main {
+    background-color: rgba(168, 168, 168, 0.048);
+    border-radius: 1rem;
+    border-color: blueviolet;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    height: max-content;
+    padding: 1%;
+    margin: 5%;
+  }
+  body main h2 {
+    text-align: center;
+    color: rgb(71, 13, 125);
+  }
+  body main #superiorView {
+    display: flex;
+    flex-direction: row;
+    text-align: -webkit-center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+  body main #superiorView #overview {
+    margin: 1%;
+    padding: 1%;
+    width: max-content;
+  }
+  body main #superiorView #overview h2 {
+    color: blueviolet;
+    margin: 1%;
+    padding: 1%;
+  }
+  body main #superiorView #overview h2 p {
+    font-size: large;
+  }
+  body main #superiorView #overview article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body main #superiorView #overview article div {
+    width: max-content;
+    align-items: center;
+  }
+  body main #superiorView #overview article div div {
+    padding-inline: 0.25rem;
+    width: 100%;
+  }
+  body main #superiorView #overview article div div .card-title {
+    text-align: center;
+  }
+  body main #superiorView #overview article div div p {
+    text-align: center;
+  }
+  body main #superiorView #overview #show-savings-chart {
+    background-color: blueviolet;
+  }
+  body main #superiorView #overview #show-savings-chart:hover {
+    background-color: rgb(99, 19, 173);
+  }
+  body main #superiorView #savings-chart {
+    margin-bottom: 5rem;
+    position: relative;
+    height: 35vh;
+    width: 50vw;
+  }
+  body main #superiorView #savings-chart #back-overview-results {
+    background-color: blueviolet;
+  }
+  body main #superiorView #savings-chart #back-overview-results:hover {
+    background-color: rgb(99, 19, 173);
+  }
+  body main #superiorView #savings-chart #dollarized-simulation-chart-button {
+    border: none;
+    background-color: rgb(138, 207, 34);
+  }
+  body main #superiorView #savings-chart #dollarized-simulation-chart-button:hover {
+    background-color: rgb(5, 101, 5);
+  }
+  body main #superiorView #savings-chart #pesify-simulation-chart-button {
+    border: none;
+    background-color: rgb(61, 61, 61);
+    color: rgb(222, 222, 222);
+    font-weight: 600;
+  }
+  body main #superiorView #savings-chart #pesify-simulation-chart-button:hover {
+    background-color: rgb(108, 108, 108);
+  }
+  body main #superiorView #savings-chart #dollarized-label-button {
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(234, 198, 22);
+  }
+  body main #superiorView #savings-chart .new-feature {
+    width: 40%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  }
+  body main #results {
+    margin: 2%;
+    border-radius: 0.75rem;
+  }
+  body main #results table {
+    text-align: center;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border-width: 0.25rem;
+  }
+  body main #results table tbody tr .delete-row-simulation-button {
+    margin: 0.5rem;
+    background-color: blueviolet;
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  body main #results table tbody tr .delete-row-simulation-button:hover {
+    background-color: rgb(71, 13, 125);
+  }
+  body main #results table tbody tr .show-chart-row-simulation-button {
+    background-color: blueviolet;
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  body main #results table tbody tr .show-chart-row-simulation-button:hover {
+    background-color: rgb(71, 13, 125);
+  }
+  body main #results table tbody tr td {
+    color: blueviolet;
+    font-weight: bold;
+  }
+  body main #results article {
+    margin: 1%;
+    padding: 1%;
+  }
+  body main #results article p {
+    color: blueviolet;
+  }
+  body main #instructions {
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    font-size: x-large;
+    color: rgb(71, 13, 125);
+    background-color: white;
+    box-shadow: rgba(105, 33, 173, 0.1) 0px 10px 10px -10px;
+    padding: 1%;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 0rem;
+  }
+  body main #formCreateSavingsAccount {
+    margin: 2%;
+    box-shadow: rgba(105, 33, 173, 0.1) 0px 1px 0px, rgba(105, 33, 173, 0.1) 0px 8px 24px, rgba(105, 33, 173, 0.1) 0px 16px 48px;
+    padding: 2%;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 0rem;
+    text-align: left;
+    width: 30%;
+    height: max-content;
+    background-color: white;
+  }
+  body main #formCreateSavingsAccount #tna {
+    width: 50%;
+  }
+  body main #formCreateSavingsAccount #form-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton {
+    background-color: blueviolet;
+    color: whitesmoke;
+    border: none;
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #calculateSavingsButton:hover {
+    background-color: rgb(105, 33, 173);
+  }
+  body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(105, 33, 173);
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #cleanSavingsButton:hover {
+    background-color: rgb(216, 216, 216);
+  }
+  body main #formCreateSavingsAccount #form-buttons #addSavingsButton {
+    border: none;
+    background-color: rgb(61, 61, 61);
+    color: rgb(222, 222, 222);
+    font-weight: 600;
+  }
+  body main #formCreateSavingsAccount #form-buttons #addSavingsButton:hover {
+    background-color: rgb(108, 108, 108);
+  }
+  body main #navbar a {
+    font-family: "Times New Roman", Times, serif;
+    font-size: larger;
+    font-weight: bold;
+  }
+  body main #navbar a:hover {
+    font-weight: bold;
+    color: blueviolet;
+  }
+  body footer {
+    text-align: center;
+  }
+  body footer #author {
+    color: blueviolet;
+    height: 1vh;
+    font-size: medium;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

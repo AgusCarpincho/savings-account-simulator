@@ -1,0 +1,250 @@
+// mobile
+
+@media only screen and (max-width: 525px){    
+    body{
+    
+        /*Sweet Alert*/
+        .swal-button--confirm{
+            background-color: blueviolet;
+        }
+        /*The main CSS*/
+        main{
+            background-color: rgba(168, 168, 168, 0.048);
+            border-radius: 1rem;
+            border-color: blueviolet;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+            height: max-content;
+            padding: 1%;
+            margin: 5%;
+            h2{
+                text-align: center;
+                color: rgb(71, 13, 125);
+            }
+            #superiorView{
+                display: flexblox;
+                flex-direction: row;
+                text-align: -webkit-center;
+                margin-top: 3%;
+                margin-bottom: 4%;
+                #overview{
+                    margin: 1%;
+                    padding: 1%;
+                    width: fit-content;
+                    h2{
+                        color: blueviolet;
+                        margin: 1%;
+                        padding: 1%;
+                        p{
+                            font-size: large;
+                        }  
+                    }
+                    article{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        div{
+                            width: max-content;
+                            align-items: center;
+                            div{
+                                padding-inline: 0.25rem;
+                                width: 100%;
+                                .card-title{
+                                    text-align: center;
+                                }
+                                p{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    #show-savings-chart{
+                        background-color: blueviolet;
+                        &:hover{
+                            background-color: rgb(99, 19, 173);
+                        }
+                    }
+                }
+                #savings-chart{
+                    margin-top: 5rem;
+                    margin-bottom: 5rem;
+                    position: relative;
+                    //height:35vh;
+                    text-align: -webkit-center;
+                    width: 100%;
+                    canvas{
+                        margin-top: 2rem;
+                    }
+                    #back-overview-results{
+                        background-color: blueviolet;
+                        &:hover{
+                            background-color: rgb(99, 19, 173);
+                        }
+                    }
+                    #dollarized-simulation-chart-button{
+                        border: none;
+                        background-color: rgb(138, 207, 34);
+                        &:hover{
+                            background-color: rgb(5, 101, 5);
+                        }
+                    }
+                    #pesify-simulation-chart-button{
+                        border: none;
+                        background-color: rgb(61, 61, 61);
+                        color: rgb(222, 222, 222);
+                        font-weight: 600;
+                        &:hover{
+                            background-color: rgb(108, 108, 108);
+                        }
+                    }
+                    #dollarized-label-button{
+                        font-size: medium;
+                        font-weight: 500;
+                        color: rgb(234, 198, 22);
+                    }
+                    .new-feature{
+                        width: 80%;
+                        padding: 0.5rem;
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.5rem;
+                        border-radius: 0.5rem;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                    }
+                }
+            }
+            #results{
+                margin: 2%;
+                border-radius: 0.75rem;
+                overflow-x: auto;
+                table{
+                    width: max-content;
+                    text-align: center;
+                    background-color: white;
+                    border-radius: 0.75rem;
+                    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+                    border-width: 0.25rem;
+                    tbody{
+                        tr{
+                            .delete-row-simulation-button{
+                                margin: 0.5rem;
+                                background-color: blueviolet;
+                                border: none;
+                                color: whitesmoke;
+                                font-weight: 600;
+                                height: 2.5rem;
+                                margin-top: 0.2rem;
+                                margin-bottom: 0.2rem;
+                                &:hover{
+                                    background-color: rgb(71, 13, 125);
+                                }
+                            }
+                            .show-chart-row-simulation-button{
+                                background-color: blueviolet;
+                                border: none;
+                                color: whitesmoke;
+                                font-weight: 600;
+                                height: 2.5rem;
+                                margin-top: 0.2rem;
+                                margin-bottom: 0.2rem;
+                                &:hover{
+                                    background-color: rgb(71, 13, 125);
+                                }
+                            }
+                            td{
+                                color: blueviolet;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                article{
+                    margin: 1%;
+                    padding: 1%;
+                    p{
+                        color: blueviolet;
+                    }
+                }
+            }
+            #instructions{
+                margin: 2%;
+                display: flex;
+                flex-direction: row;
+                font-size: x-large;
+                color: rgb(71, 13, 125);
+                background-color: white;
+                box-shadow: rgba(105, 33, 173, 0.1) 0px 10px 10px -10px;
+                padding: 1%;
+                border-radius: 0.5rem;
+                border-style: solid;
+                border-width: 0rem;
+            }
+            #formCreateSavingsAccount{
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                box-shadow: rgba(105, 33, 173, 0.1) 0px 1px 0px, rgba(105, 33, 173, 0.1) 0px 8px 24px, rgba(105, 33, 173, 0.1) 0px 16px 48px;
+                padding: 2%;
+                border-radius: 1rem;
+                border-style: solid;
+                border-width: 0rem;
+                width: 80%;
+                height: max-content;
+                background-color: white;
+                #tna{
+                    width: 50%;
+                }
+                #form-buttons{
+                    display: flex;
+                    gap: 0.5rem;
+                    #calculateSavingsButton{
+                        background-color: blueviolet;
+                        color: whitesmoke;
+                        border: none;
+                        font-weight: 600;
+                        &:hover{
+                            background-color: rgb(105, 33, 173);
+                        }
+                    }
+                    #cleanSavingsButton{
+                        border: none;
+                        background-color: rgb(235, 235, 235);
+                        color: rgb(105, 33, 173);
+                        font-weight: 600;
+                        &:hover{
+                            background-color: rgb(216, 216, 216);
+                        }
+                    }
+                    #addSavingsButton{
+                        border: none;
+                        background-color: rgb(61, 61, 61);
+                        color: rgb(222, 222, 222);
+                        font-weight: 600;
+                        &:hover{
+                            background-color: rgb(108, 108, 108);
+                        }
+                    }
+                }
+                
+            }
+            #navbar{
+                a{
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: larger;
+                    font-weight: bold;
+                    &:hover{
+                        
+                        font-weight: bold;
+                        color: blueviolet;
+                    }
+                }
+            }
+        }
+        footer{
+            text-align: center;
+            #author{
+                color: blueviolet;
+                height: 1vh;
+                font-size: medium;
+            }
+        }
+    }
+}
+
