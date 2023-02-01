@@ -114,6 +114,18 @@
     border-radius: 0.75rem;
     overflow-x: auto;
   }
+  body main #results::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+  body main #results::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+  }
+  body main #results::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  }
   body main #results table {
     width: max-content;
     text-align: center;
@@ -358,7 +370,16 @@
     text-align: -webkit-center;
   }
   body main #results::-webkit-scrollbar {
-    width: 0.5rem; /* width of the entire scrollbar */
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+  body main #results::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+  }
+  body main #results::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
   }
   body main #results table {
     width: max-content;
@@ -677,7 +698,7 @@
     background-color: white;
   }
   body main #formCreateSavingsAccount #tna {
-    width: 50%;
+    width: 80%;
   }
   body main #formCreateSavingsAccount #form-buttons {
     display: flex;
