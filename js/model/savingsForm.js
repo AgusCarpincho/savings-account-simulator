@@ -33,12 +33,14 @@ export function initializeFormComponents() {
                             <td>AR$ ${savingsAccount.amount}</td>
                             <td>${savingsAccount.percentageRealInterest()}%</td>
                             <td>${savingsAccount.percentageRealInterestByMonth()}%</td>
-                            <td colspan="1">AR$ ${savingsAccount.proyection()}</td>
+                            <td>AR$ ${savingsAccount.proyection()}</td>
                             <td>AR$ ${savingsAccount.finalEarnings()}</td>
+                            <td>
                             <button id="show-savings-chart-simul-${savingsAccount.id}" class="btn btn-primary show-chart-row-simulation-button" type="button">Ver gráfico <i class="fa-solid fa-chart-column"></i></button>
                             <button id="delete-simulation-button-${savingsAccount.id}" class="btn btn-primary delete-row-simulation-button" type="button">
                                 <i class="fa-solid fa-trash"></i>
-                            </button>`;
+                            </button>
+                            </td>`;
         resultsItems.appendChild(trNode);
         (document.getElementById(`delete-simulation-button-${savingsAccount.id}`)).onclick = () => {deleteSavingsAccountSimulationWithId(savingsAccount.id)};
         (document.getElementById(`show-savings-chart-simul-${savingsAccount.id}`)).onclick = () => {showChartSimulationIdentifiedWithId(savingsAccount.id)};
