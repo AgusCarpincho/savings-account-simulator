@@ -121,14 +121,10 @@ export function showChartSimulationIdentifiedWithId(simulationId){
 
 async function obteinLastUSDARSQuotation() {
     
-  let quotation = 0;
-  await fetch("../../utility/USDARSQuotations.json")
-                      .then( response => response.json())
-                      .then( quotationsArray => {
-                        const randomIndex = Math.floor(Math.random() * quotationsArray.length);
-                        quotation = quotationsArray[randomIndex];
-                      });
-  return parseFloat(quotation);
+  return await fetch('https://api.bluelytics.com.ar/v2/latest')
+    .then(response => response.json())
+	    .then(data => data.oficial.value_avg)
+	    .catch(err => console.error(err));
 }
 
 export async function dollarizeChartSimulation() {
@@ -136,10 +132,10 @@ export async function dollarizeChartSimulation() {
   // we use the current savings account that we are visualizing
   
   let lastUSDARSQuotation = await obteinLastUSDARSQuotation();
-
+  
   const currentSavingsAccountVisualizing = JSON.parse(localStorage.getItem("currentSavingsAccountVisualizing"));
 
-  let savingsAccount = new SavingsAccount(0,parseFloat(currentSavingsAccountVisualizing.amount)*lastUSDARSQuotation,parseInt(currentSavingsAccountVisualizing.periodInMonths),parseInt(currentSavingsAccountVisualizing.tnaIndicator));
+  let savingsAccount = new SavingsAccount(0,parseFloat(currentSavingsAccountVisualizing.amount)*(1/lastUSDARSQuotation),parseInt(currentSavingsAccountVisualizing.periodInMonths),parseInt(currentSavingsAccountVisualizing.tnaIndicator));
 
   // actualizamos el grafico con el nuevo plazo fijo dolarizado
 
@@ -165,7 +161,7 @@ export async function dollarizeChartSimulation() {
       data: {
         labels: labels,
         datasets: [{
-            label: `Ganancias mensuales (en U$D). Ùltima cotización del dólar oficial U$D 1 = AR$ ${((1/lastUSDARSQuotation)/2).toFixed(2)}`, // i divided the result because its the official dollar value not blue and its almost the half lol
+            label: `Ganancias mensuales (en U$D). Ùltima cotización del dólar oficial U$D 1 = AR$ ${(lastUSDARSQuotation)}`,
             data: data,
             backgroundColor: 'rgb(138, 207, 34)',
             borderWidth: 1
